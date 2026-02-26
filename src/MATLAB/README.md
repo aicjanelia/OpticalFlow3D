@@ -1,8 +1,12 @@
 # OpticalFlow3D MATLAB Implementation
 
+# Quick Start
+
+To get started using OpticalFlow3D, you first need to install MATLAB, as described in the Dependencies section below. Once MATLAB is installed, a good starting point is the file `example_processing_script.m`, which provides examples of calculating optical flow. After opening the file, fill in the appropriate paths to the images to be processed, and then run the appropriate code section. To run the code section, first make sure the cursor is anywhere in the section containing the example you are testing, and then press the `Run Section` button at the top of the editor window. These same instructions can be used to explore the `example_analysis_script.m` file, which provides example of analyzing the calculated flow fields.
+
 # Dependencies
 
-This implementation requires MATLAB R2023a or newer. Eigenvalues are calculated using `pageeig`, which was not available in previous versions. All testing of this implementation was done in R2024b. Usage in other versions is not guaranteed.
+This implementation requires MATLAB R2023a or newer. Eigenvalues are calculated using `pageeig`, which was not available in previous versions. All testing of this implementation was done in R2024b. Usage in other versions is not guaranteed. In addition to the base installation, the MATLAB installation must include the Image Processing Toolbox. 
 
 The package `natsort` is from the [MATLAB File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort). The colormaps used are from `colorcet`, courtesty of *Peter Kovesi. Good Colour Maps: How to Design Them. [arXiv:1509.03700](https://arxiv.org/abs/1509.03700) 2015.* Both packages are included in this repository already and do not need to be downloaded separately. 
 
@@ -59,7 +63,7 @@ For each analyzed time point, the function saves four tif files (three for 2D pr
 
 The `example_processing_script.m` file provides an example of using process flow to analyze a set of images. Example 1 shows how to analyze a series of files (i.e., the `'SequenceT'` type), and Example 2 shows how to process multiple folders of `'OneTif'` format files at once.
 
-In `example_analysis_script.m`, the output of the processing script is visualized and analyzed. This analysis requires the image directory and the name of the dataset, as well as metadata about the images. Analysis parameters include a reliability threshold value and parameters to control the visualization. The output of this script is a series of vector field images colored by magnitude, as well as a plot of the mean magnitude over time.
+In `example_analysis_script.m`, the output of the processing script is visualized and analyzed. This analysis requires the image directory and the name of the dataset, as well as metadata about the images. Analysis parameters include a reliability threshold value and parameters to control the visualization. The outputs of this script include visualization of the reliability mask, a quiver visualization of theta, distributions of magnitude and theta, and examples of running these analyses over time.
 
 ## Subfunctions
 

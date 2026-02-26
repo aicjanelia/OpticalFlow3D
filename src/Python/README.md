@@ -1,10 +1,17 @@
 # OpticalFlow3D Python Implementation
 
+# Quick Start
+
+To get started using OpticalFlow3D, you first need a Python environment with the required dependencies, listed below. Once your Python environment is set up, a good starting point is the notebook `example_processing_script.ipynb`, which provides examples of calculating optical flow. If you are uncertain how to get started with a Jupyter Notebook, a code editor (e.g., [VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)) will allow for interactive use of the notebook file. If you prefer, you may alternatively start a Jupyter interface from the command line using the command `jupyter notebook` and navigating to the correct file in the browser window that opens.
+
+These same instructions can be used to explore the `example_analysis_script.ipynb` notebook, which provides example of analyzing the calculated flow fields.
+
 # Dependencies
 
 The calculation and visualization tools described below require the following Python packages:
 
 - colorcet
+- jupyter
 - matplotlib
 - natsort
 - numpy
@@ -68,8 +75,8 @@ The function `process_flow` excludes the first and last $3 \times tSig$ time poi
 
 For each analyzed time point, the function saves four tif files (three for 2D processing). These files correspond to the intensity changes in each directory ($v_x$, $v_y$, $v_z$), and reliability values (rel) for that time point. Each tif is saved with float precision.
 
-## Example Scripts
+## Example Notebooks
 
 The `example_processing_script.ipynb` file provides an example of using process flow to analyze a set of images. Example 1 shows how to analyze a series of files (i.e., the `'SequenceT'` type), and Example 2 shows how to process multiple folders of `'OneTif'` format files at once.
 
-In `example_analysis_script.ipynb`, the output of the processing script is visualized and analyzed. This analysis requires the image directory and the name of the dataset, as well as metadata about the images. Analysis parameters include a reliability threshold value and parameters to control the visualization. The outputs of this script include visualization of the reliability mask, a quiver visualization of magnitude, and distributions of magnitude and theta.
+In `example_analysis_script.ipynb`, the output of the processing notebook is visualized and analyzed. This analysis requires the image directory and the name of the dataset, as well as metadata about the images. Analysis parameters include a reliability threshold value and parameters to control the visualization. The outputs of this notebook include visualization of the reliability mask, a quiver visualization of theta, distributions of magnitude and theta, and examples of running these analyses over time.

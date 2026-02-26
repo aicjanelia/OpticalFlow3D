@@ -70,6 +70,6 @@ For each analyzed time point, the function saves four tif files (three for 2D pr
 
 ## Example Scripts
 
-The `example_processing_script.m` file provides an example of using process flow to analyze a set of images. Example 1 shows how to analyze a series of files (i.e., the `'SequenceT'` type), and Example 2 shows how to process multiple folders of `'OneTif'` format files at once.
+The `example_processing_script.ipynb` file provides an example of using process flow to analyze a set of images. Example 1 shows how to analyze a series of files (i.e., the `'SequenceT'` type), and Example 2 shows how to process multiple folders of `'OneTif'` format files at once.
 
-In `example_analysis_script.m`, the output of the processing script is visualized and analyzed. This analysis requires the image directory and the name of the dataset, as well as metadata about the images. Analysis parameters include a reliability threshold value and parameters to control the visualization. The outputs of this script include visualization of the reliability mask, a quiver visualization of magnitude, and distributions of magnitude and theta.
+In `example_analysis_script.ipynb`, the output of the processing script is visualized and analyzed. This analysis requires the image directory and the name of the dataset, as well as metadata about the images. Analysis parameters include a reliability threshold value and parameters to control the visualization. The outputs of this script include visualization of the reliability mask, a quiver visualization of magnitude, and distributions of magnitude and theta.
